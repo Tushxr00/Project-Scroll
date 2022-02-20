@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+ :root {
+    --first-font: 'Josefin Sans', sans-serif;
+    --white: #ffffff;
+    --black: #000000;
+    --black-2: #111111;
+    --light: #42cbf8;
+    --peach: #FFE5B4;
+    --red: rgb(199, 14, 14);
+    --grey: rgb(122, 120, 120);
+    --white-2: whitesmoke;
+    --blue: #2D4263;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--first-font);
+    background-color: var(--peach);
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    letter-spacing: 1rem;
+    text-transform: capitalize;
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+    font-family: var(--first-font);
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+h4 {
+    font-size: 0.875rem;
+}
+
+p {
+    margin-bottom: 1.25rem;
+    color: var(--grey);
+}
+
+@media screen and (min-width: 800px) {
+    h1 {
+        font-size: 4rem;
+    }
+    h2 {
+        font-size: 2.5rem;
+    }
+    h3 {
+        font-size: 1.75rem;
+    }
+    h4 {
+        font-size: 1rem;
+    }
+    body {
+        font-size: 1rem;
+    }
+    h1,
+    h2,
+    h3,
+    h4 {
+        line-height: 1;
+    }
+}
+
+.btn {
+    text-transform: uppercase;
+    background: transparent;
+    color: var(--white);
+    padding: 1rem;
+    letter-spacing: 0.3rem;
+    transition: 1s;
+    font-size: 1rem;
+    border: 2px solid var(--black-2);
+    cursor: pointer;
+    border-radius: 3rem;
+    margin: 1rem;
+}
+
+.btn:hover {
+    color: var(--light);
+    background: var(--black);
+}
+
+nav {
+    background: var(--black);
+    padding: 1rem 1.5rem;
+}
+
+.fixed-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--black);
+}
+
+.fixed-nav .links a {
+    color: var(--white);
+}
+
+.fixed-nav .links a:hover {
+    color: var(--grey);
+}
+
+.nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-toggle {
+    font-size: 1.5rem;
+    color: var(--grey);
+    background: transparent;
+    border-color: transparent;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.nav-toggle:hover {
+    color: var(--white);
+}
+
+.logo {
+    height: 50px;
+}
+
+.link-container {
+    height: 0;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.show-links {
+    height: 200px;
+}
+
+.links a {
+    color: var(--white);
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    display: block;
+    transition: 1s;
+    font-weight: bold;
+    padding: 0.75rem 0;
+}
+
+.links a:hover {
+    color: var(--grey);
+}
+
+@media screen and (min-width: 800px) {
+    nav {
+        background: transparent;
+    }
+    .nav-center {
+        width: 90vw;
+        max-width: 1170px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .nav-header {
+        padding: 0;
+    }
+    .nav-toggle {
+        display: none;
+    }
+    .link-container {
+        height: auto !important;
+    }
+    .links {
+        display: flex;
+    }
+    .links a {
+        background: transparent;
+        color: var(--white);
+        font-size: 1.1rem;
+        text-transform: capitalize;
+        display: block;
+        transition: 1s;
+        margin: 0 1rem;
+        font-weight: bold;
+        padding: 0;
+    }
+    .links a:hover {
+        color: var(--white);
+    }
+}
+
+header {
+    min-height: 100vh;
+    background: linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.7)), url(images/leaf_green_dark_plant_120039_1920x1080.jpg) center/cover no-repeat;
+}
+
+.background {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+.container h1 {
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+.container p {
+    color: var(--white);
+    max-width: 25rem;
+    margin: 0 auto;
+    margin-bottom: 1.25rem;
+}
+
+@media screen and (min-width: 768px) {
+    .container p {
+        max-width: 40rem;
+    }
+}
+
+.title h2 {
+    padding-top: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.title span {
+    color: var(--light);
+}
+
+#about-us,
+#our-services,
+#our-work {
+    height: 80vh;
+}
+
+#our-services {
+    background: var(--white);
+}
+
+footer {
+    background: var(--blue);
+    padding: 5rem 1rem;
+}
+
+footer p {
+    color: var(--white);
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: 4px;
+    margin-bottom: 0;
+}
+
+.home-btn {
+    font-size: 1.25rem;
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    background: var(--grey);
+    width: 2rem;
+    height: 2rem;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    color: var(--black);
+    visibility: hidden;
+    z-index: -100;
+}
+
+.show-link {
+    visibility: visible;
+    z-index: 100;
+}
